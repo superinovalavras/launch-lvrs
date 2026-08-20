@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch LVRS+ — Pré-aceleração de startups em Lavras</title>
+<meta name="description" content="Programa de pré-aceleração de startups da Prefeitura Municipal de Lavras. Dez equipes, quatorze semanas, custo zero. Inscrições de 24 de agosto a 9 de outubro de 2026.">
+
+<!-- Como o link aparece quando alguém compartilha no WhatsApp, Instagram ou LinkedIn.
+     Trocar SEU-DOMINIO pelo endereço real depois de publicar na Vercel. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Launch LVRS+">
+<meta property="og:title" content="Launch LVRS+ — Pré-aceleração de startups em Lavras">
+<meta property="og:description" content="Dez equipes, quatorze semanas, custo zero. Inscrições até 9 de outubro de 2026.">
+<meta property="og:image" content="https://SEU-DOMINIO/assets/launch-logo.png">
+<meta property="og:url" content="https://SEU-DOMINIO/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/launch-logo.png">
+<script>document.documentElement.classList.add('js-ready');</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+<div class="scroll-rail" aria-hidden="true">
+  <span class="rail-label">Largada</span>
+  <div class="rail-track">
+    <div class="rail-fill" id="railFill"></div>
+    <img class="rail-rocket" id="railRocket" src="assets/foguete.png" alt="">
+  </div>
+  <span class="rail-label">Demoday</span>
+</div>
+
+<div class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div id="heroParallax">
+    <div class="wrap">
+      <div class="hero-kicker">
+        <span class="rule" aria-hidden="true"></span>
+        <span class="eyebrow">Programa de pré-aceleração</span>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+
+      <img class="hero-logo" src="assets/launch-logo.png" alt="Launch Lvrs+ — Pacto Lavras pela Inovação">
+
+      <p class="hero-sub">Lavras agora vai pré-acelerar a sua Startup. Dez equipes, quatorze semanas de jornada e <em>uma cidade inteira</em> como campo de prova.</p>
+
+      <p class="hero-byline">Inscrições gratuitas de 24 de agosto a 9 de outubro de 2026. Uma iniciativa da Superintendência de Políticas de Ciência, Tecnologia e Inovação — Prefeitura Municipal de Lavras.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tabbar" id="tabbar">
+  <div class="wrap tabbar-inner">
+    <button class="tab-btn active" data-tab="definicao">O que é?</button>
+    <button class="tab-btn" data-tab="porque">Por que participar?</button>
+    <button class="tab-btn" data-tab="como">Cronograma</button>
+    <button class="tab-btn" data-tab="inscrever">Como se inscrever</button>
+    <a class="tab-btn cta-outline" href="https://docs.google.com/forms/d/e/1FAIpQLScmtj_duvEW7uPsk-DqT71yMmXBg-kpiMLJpuKEL8W9EUmcZA/viewform" target="_blank" rel="noopener">Inscreva-se</a>
+    <a class="tab-btn cta-secondary tab-edital" href="#" target="_blank" rel="noopener">Edital em PDF</a>
+  </div>
+</div>
+
+<div class="wrap" style="position: relative; z-index: 1;">
+
+  <section class="panel active panel-in" id="panel-definicao">
+    <p class="eyebrow-label reveal">-</p>
+    <h2 class="reveal">O que é o <em>Launch</em> LVRS+?</h2>
+    <p class="lede reveal">Um programa de pré-aceleração de startups executado pela Prefeitura Municipal de Lavras. Quatorze semanas para tirar uma ideia do papel e transformar em empresa de verdade. Dez equipes entram. Nenhuma sai igual.</p>
+
+    <div class="stat-row reveal">
+      <div><span class="stat-num" data-count-to="10">10</span><span class="stat-label">equipes selecionadas</span></div>
+      <div><span class="stat-num" data-count-to="14">14</span><span class="stat-label">semanas de programa</span></div>
+      <div><span class="stat-num" data-count-to="49">49</span><span class="stat-label">aulas em 8 módulos</span></div>
+      <div><span class="stat-num" data-count-to="0">0</span><span class="stat-label">custo para participar</span></div>
+    </div>
+
+    <div class="feature-list reveal">
+      <div class="feature-row"><span class="f-tag">Online</span><p>49 aulas em 8 módulos na plataforma LAUNCH Digital, liberadas em blocos semanais. Você estuda no seu horário.</p></div>
+      <div class="feature-row"><span class="f-tag">Presencial</span><p>Encontros na Unilavras, das 19h às 21h: oficina prática e banca de pitch, toda semana.</p></div>
+      <div class="feature-row"><span class="f-tag">Mentoria</span><p>Sete rodadas de mentoria individual online, uma a cada virada da jornada.</p></div>
+      <div class="feature-row"><span class="f-tag">Rede</span><p>Acesso ao Vale dos Ipês, o ecossistema de inovação de Lavras: academia, governo, sociedade e setor privado na mesma mesa.</p></div>
+      <div class="feature-row"><span class="f-tag">Certificação</span><p>Demoday público de encerramento, com entrega de dois certificados independentes.</p></div>
+      <div class="feature-row"><span class="f-tag">Depois</span><p>A porta não fecha no Demoday: quem conclui entra na rede do RAJA e pode pedir, em até um ano, uma agenda para apresentar seu pitch ao time de investimento deles. É uma oportunidade de apresentação, não uma promessa de investimento.</p></div>
+    </div>
+
+    <p class="eyebrow-label reveal" style="margin-top: -16px;">A grade</p>
+    <p class="module-intro reveal">São 49 aulas organizadas em 8 módulos, liberadas em blocos semanais ao longo das 14 semanas. Cada módulo fecha com o estudo de caso de uma empresa real e com uma aplicação prática no seu próprio projeto.</p>
+
+    <div class="module-list reveal">
+      <div class="module-item"><span class="m-num">01</span><div><h4>Introdução e Onboarding</h4><p>Como a jornada funciona, o que se espera de cada equipe e integração com a turma e a plataforma.</p></div></div>
+      <div class="module-item"><span class="m-num">02</span><div><h4>Jurídico para Startups</h4><p>Acordo de sócios, estrutura societária, contratos e propriedade intelectual. Estudo de caso: Uber.</p></div></div>
+      <div class="module-item"><span class="m-num">03</span><div><h4>Dor de Mercado</h4><p>Como descobrir se o problema que você resolve é real — e se alguém pagaria para resolvê-lo. Estudo de caso: Airbnb.</p></div></div>
+      <div class="module-item"><span class="m-num">04</span><div><h4>Modelagem e Proposta de Valor</h4><p>Canvas de proposta de valor, persona e segmentação de cliente. Estudo de caso: Nubank.</p></div></div>
+      <div class="module-item"><span class="m-num">05</span><div><h4>Comunicação e Pitch</h4><p>Como construir um pitch que sustenta a própria história e resiste a pergunta difícil. Estudo de caso: WeWork.</p></div></div>
+      <div class="module-item"><span class="m-num">06</span><div><h4>MVP e Jornada do Usuário</h4><p>Metodologias ágeis, prototipagem, IA e no-code na prática. Estudo de caso: Dropbox.</p></div></div>
+      <div class="module-item"><span class="m-num">07</span><div><h4>Go-to-Market e Growth</h4><p>Pipeline de vendas, aquisição, retenção e escala de clientes. Estudo de caso: Slack.</p></div></div>
+      <div class="module-item"><span class="m-num">08</span><div><h4>Modelagem Financeira</h4><p>Precificação, unit economics, modelagem financeira e caminhos de fomento. Estudo de caso: Airbnb.</p></div></div>
+    </div>
+
+    <p class="eyebrow-label reveal">Quem faz acontecer</p>
+    <p class="credibility reveal">Quem puxa o programa é a <strong>Superintendência de Políticas de Ciência, Tecnologia e Inovação</strong> da Prefeitura de Lavras — do edital à formatura, a cidade assume a conta e a condução. A metodologia é a do <strong>RAJA</strong>, que roda o Launch desde 2016 e já pré-acelerou <strong>215 projetos</strong> em <strong>9 edições</strong>. É o mesmo conteúdo, as mesmas mentorias e as mesmas bancas que rodam nos grandes centros — agora em Lavras, de graça, para dez equipes daqui.</p>
+
+  </section>
+
+  <section class="panel" id="panel-porque">
+    <p class="eyebrow-label reveal">-</p>
+    <h2 class="reveal">Por que sua Startup <em>deveria</em> estar aqui?</h2>
+    <p class="lede reveal">Pré-aceleração boa não é sobre assistir aula. É sobre executar e ter que defender o resultado toda semana, na frente de quem vai te dizer a verdade. Este programa é para quem vai tocar um negócio — não para quem quer assistir a uma aula.</p>
+
+    <div class="benefit-list reveal" id="tiltGrid">
+      <div class="benefit-item">
+        <h3>Custo zero, sem pegadinha</h3>
+        <p>A Prefeitura paga a conta. Não há taxa de inscrição, mensalidade nem cobrança de qualquer valor, em nenhuma etapa — nem pelo Município, nem pelo parceiro, nem por terceiros.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Uma banca por semana</h3>
+        <p>Bancas de pitch semanais, com um avaliadores convidados. Em 14 semanas você se apresenta mais do que a maioria se apresenta em anos.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Na sua cidade</h3>
+        <p>Tudo acontece em Lavras, na Unilavras. Você não precisa ir para um grande centro nem mudar de cidade para chegar perto de um programa desse nível — ele vem até aqui.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Sete mentorias individuais</h3>
+        <p>Diagnóstico, validação da dor de mercado, modelo de negócio, viabilidade financeira e curadoria do pitch — uma sessão online para cada virada da jornada.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Dois certificados</h3>
+        <p>O Certificado Municipal LVRS+, para quem registrar 75% de frequência e cumprir as entregas, e o certificado de conclusão da plataforma. Um não depende do outro.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>O conteúdo fica com você</h3>
+        <p>Cada projeto selecionado recebe 3 licenças pessoais e vitalícias da plataforma LAUNCH Digital. Terminado o programa, o material continua seu.</p>
+      </div>
+    </div>
+
+    <p class="eyebrow-label reveal">Para não restar dúvida</p>
+    <p class="credibility reveal">O Launch LVRS+ <strong>não distribui prêmio em dinheiro</strong>, bolsa, auxílio, subvenção ou aporte, e não repassa recursos públicos às equipes. <strong>Não é competição</strong>: as dez equipes fazem a jornada inteira juntas, e ninguém é eliminado no meio do caminho. A <strong>propriedade intelectual do seu projeto continua 100% sua</strong> — o Município não adquire participação societária, direito de preferência, opção de compra nem royalties. O que você leva daqui é formação, rede e um negócio mais bem construído.</p>
+
+    <div class="testimonial-row reveal">
+      <blockquote>
+        <p>"Atingimos muito network e conseguimos o smart money através do investimento e de muitos contatos que foram compartilhados."</p>
+        <cite>Laís Laine <span>The Hub</span></cite>
+      </blockquote>
+      <blockquote>
+        <p>"Recebemos nosso primeiro aporte, que nos permitiu investir em tecnologia, aquisição de clientes e gestão do negócio."</p>
+        <cite>Gabriel Sousa <span>M3 Lending</span></cite>
+      </blockquote>
+      <blockquote>
+        <p>"Foi uma experiência incrível pra estruturar o negócio, ter novas conexões e conhecer o mercado."</p>
+        <cite>Lucas Quaresma <span>FXN Capital</span></cite>
+      </blockquote>
+    </div>
+    <p class="testimonial-note reveal">Depoimentos de participantes de edições anteriores do Launch, realizadas em outras cidades e com regras próprias. A turma de Lavras ainda vai escrever a sua história.</p>
+
+  </section>
+
+  <section class="panel" id="panel-como">
+    <p class="eyebrow-label reveal">-</p>
+    <h2 class="reveal">Do edital <em>ao</em> Demoday</h2>
+    <p class="lede reveal">Duas fases: 46 dias de inscrições abertas e, depois da seleção, quatorze semanas de programa.</p>
+
+    <div class="timeline reveal">
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">24 ago — 09 out 2026</span>
+        <span class="tl-text">Inscrições abertas</span>
+        <span class="tl-sub">Formulário eletrônico, gratuito, até as 23h59 do dia 9 de outubro — 46 dias corridos</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">13 out 2026</span>
+        <span class="tl-text">Habilitação documental</span>
+        <span class="tl-sub">A Comissão de Seleção confere se a inscrição está completa e cumpre os requisitos do edital</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">14 out 2026</span>
+        <span class="tl-text">Avaliação de mérito</span>
+        <span class="tl-sub">Formulário, pitch deck e vídeo de pitch pontuados nos sete critérios do edital</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">15 out 2026</span>
+        <span class="tl-text">Arguição técnica</span>
+        <span class="tl-sub">Entrevista online de até 20 minutos com as equipes classificadas na avaliação de mérito</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">16 out 2026</span>
+        <span class="tl-text">Resultado preliminar</span>
+        <span class="tl-sub">Divulgação dos pré-selecionados no Diário Oficial do Município e no portal do programa, abrindo o prazo recursal</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">19 — 21 out 2026</span>
+        <span class="tl-text">Prazo recursal</span>
+        <span class="tl-sub">Três dias úteis para recorrer do resultado preliminar, com julgamento consolidado em 21 de outubro</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">23 out 2026</span>
+        <span class="tl-text">Resultado final</span>
+        <span class="tl-sub">Divulgação oficial das dez equipes selecionadas, com cadastro de suplentes</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">28 out 2026</span>
+        <span class="tl-text">Apresentação pública das equipes</span>
+        <span class="tl-sub">Boas-vindas do ecossistema às dez equipes selecionadas, na Unilavras</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">04 nov 2026</span>
+        <span class="tl-text">Onboarding</span>
+        <span class="tl-sub">Regras de frequência, calendário completo e assinatura do Termo de Compromisso</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">09 nov 2026</span>
+        <span class="tl-text">Abertura oficial</span>
+        <span class="tl-sub">Aula magna e integração das dez equipes, na Unilavras</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">nov — dez 2026</span>
+        <span class="tl-text">A jornada começa</span>
+        <span class="tl-sub">Aulas na plataforma, oficinas práticas e banca de pitch toda semana</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">21 dez — 01 jan</span>
+        <span class="tl-text">Recesso de fim de ano</span>
+        <span class="tl-sub">Sem atividade presencial. A plataforma segue liberada, com desafio assíncrono. Retomada em 4 de janeiro</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">15 jan 2027</span>
+        <span class="tl-text">Banca de Avaliação 01</span>
+        <span class="tl-sub">Primeira banca formal, com executivos de mercado convidados</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">08 — 12 fev 2027</span>
+        <span class="tl-text">Recesso de carnaval</span>
+        <span class="tl-sub">Sem atividade presencial. A plataforma segue liberada</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">18 fev 2027</span>
+        <span class="tl-text">Banca de Avaliação 02</span>
+        <span class="tl-sub">Segunda banca formal, após o módulo de modelagem financeira</span>
+      </div></div>
+      <div class="tl-row"><div class="tl-card">
+        <span class="tl-date">05 mar 2027</span>
+        <span class="tl-text">Demoday</span>
+        <span class="tl-sub">Pitch final aberto ao público e entrega dos certificados</span>
+      </div></div>
+    </div>
+
+    <p class="eyebrow-label reveal">A rotina da semana</p>
+    <p class="module-intro reveal">Durante as 14 semanas, a jornada tem um ritmo fixo. Basta um integrante da equipe presente em cada atividade obrigatória — e a frequência mínima de 75% é o que garante o Certificado Municipal LVRS+.</p>
+
+    <div class="feature-list reveal">
+      <div class="feature-row"><span class="f-tag">Segunda</span><p>Banca de pitch semanal, 19h às 21h, na Unilavras. Um avaliador convidado diferente a cada semana. Presença obrigatória.</p></div>
+      <div class="feature-row"><span class="f-tag">Quarta</span><p>Oficina prática, 19h às 21h. Mão na massa em cima do conteúdo do módulo da semana. Presença obrigatória.</p></div>
+      <div class="feature-row"><span class="f-tag">Sexta</span><p>Sexta do Vale: coworking aberto, office hours da Superintendência e networking — que costuma virar happy hour. Participação livre, não conta na frequência.</p></div>
+      <div class="feature-row"><span class="f-tag">Na plataforma</span><p>Um bloco de aulas liberado por semana, para estudar no seu ritmo, de onde estiver.</p></div>
+    </div>
+
+    <p class="eyebrow-label reveal">As mentorias</p>
+    <p class="module-intro reveal">Cada equipe tem sete rodadas de mentoria individual online ao longo do programa, uma para cada virada da jornada:</p>
+
+    <div class="feature-list reveal">
+      <div class="feature-row"><span class="f-tag">01 · Nov</span><p>Diagnóstico inicial do projeto e definição das metas da equipe para o programa.</p></div>
+      <div class="feature-row"><span class="f-tag">02 · Dez</span><p>Validação da dor de mercado com evidência, não com opinião.</p></div>
+      <div class="feature-row"><span class="f-tag">03 · Dez</span><p>Modelo de negócio e proposta de valor.</p></div>
+      <div class="feature-row"><span class="f-tag">04 · Jan</span><p>Leitura dos feedbacks da Banca 01 e replanejamento.</p></div>
+      <div class="feature-row"><span class="f-tag">05 · Fev</span><p>Viabilidade financeira e estratégia de captação.</p></div>
+      <div class="feature-row"><span class="f-tag">06 · Fev</span><p>Curadoria dos pitches de Demoday.</p></div>
+      <div class="feature-row"><span class="f-tag">07 · Mar</span><p>Ajuste final, individual, de cada pitch.</p></div>
+    </div>
+
+  </section>
+
+  <section class="panel" id="panel-inscrever">
+    <p class="eyebrow-label reveal">Inscrição</p>
+    <h2 class="reveal">Quem pode entrar e <em>o que</em> enviar</h2>
+    <p class="lede reveal">A inscrição é gratuita e feita por formulário eletrônico, até as 23h59 de 9 de outubro de 2026. Vale para equipes, não para pessoas sozinhas.</p>
+
+    <p class="eyebrow-label reveal">Quem pode se inscrever</p>
+
+    <div class="benefit-list reveal">
+      <div class="benefit-item">
+        <h3>Equipe de 2 a 5 pessoas</h3>
+        <p>Pessoas físicas. Cada pessoa pode integrar apenas uma equipe, e cada equipe inscreve apenas um projeto.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Vínculo com Lavras</h3>
+        <p>O representante precisa morar em Lavras ou comprovar que o projeto é desenvolvido, sediado ou operado aqui. Os demais integrantes podem morar em qualquer lugar.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Projeto em fase inicial</h3>
+        <p>Ideação, validação, prototipagem, MVP ou operação inicial, com tecnologia como elemento central da solução. CNPJ não é exigido.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Porte compatível</h3>
+        <p>Faturamento de até R$ 1 milhão por ano e nenhum aporte de capital de risco acima de R$ 500 mil. O programa é para quem está começando.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>8 horas por semana</h3>
+        <p>É o mínimo de dedicação da equipe, com ao menos um integrante presente em cada atividade presencial obrigatória.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>A partir dos 16 anos</h3>
+        <p>O representante precisa ter 18 anos ou mais. Quem tem 16 ou 17 pode integrar a equipe com autorização do responsável legal (Anexo VI).</p>
+      </div>
+    </div>
+
+    <p class="eyebrow-label reveal">O que enviar na inscrição</p>
+    <p class="module-intro reveal">Separe tudo antes de começar a preencher — o formulário leva cerca de 40 minutos e a inscrição só vale depois do envio definitivo.</p>
+
+    <div class="feature-list reveal">
+      <div class="feature-row"><span class="f-tag">Documentos</span><p>Documento oficial com foto e CPF de cada integrante da equipe.</p></div>
+      <div class="feature-row"><span class="f-tag">Comprovação</span><p>Comprovante de residência do representante, ou documento que comprove que o projeto opera em Lavras.</p></div>
+      <div class="feature-row"><span class="f-tag">Pitch deck</span><p>Em PDF, com no máximo 10 páginas. Páginas além da décima não são consideradas.</p></div>
+      <div class="feature-row"><span class="f-tag">Vídeo de pitch</span><p>Link público de até 3 minutos. Confira se o link está aberto antes de enviar.</p></div>
+      <div class="feature-row"><span class="f-tag">Anexos</span><p>Anexos IV, V e IX assinados. E o Anexo VI, se houver integrante de 16 ou 17 anos.</p></div>
+      <div class="feature-row"><span class="f-tag">Opcional</span><p>Vídeo de apresentação da equipe, até 1 minuto. Não é obrigatório, mas conta pontos no critério Equipe.</p></div>
+    </div>
+
+    <p class="eyebrow-label reveal">Como a seleção funciona</p>
+    <p class="module-intro reveal">São quatro etapas, todas conduzidas pela Comissão de Seleção da Prefeitura, com decisões motivadas por escrito e publicadas no Diário Oficial do Município.</p>
+
+    <div class="module-list reveal">
+      <div class="module-item"><span class="m-num">01</span><div><h4>Inscrição</h4><p>Preenchimento e envio do formulário com todos os documentos exigidos, até 9 de outubro.</p></div></div>
+      <div class="module-item"><span class="m-num">02</span><div><h4>Habilitação</h4><p>Conferência objetiva dos requisitos. Aqui não se avalia mérito — só se a inscrição está completa e elegível.</p></div></div>
+      <div class="module-item"><span class="m-num">03</span><div><h4>Avaliação de mérito</h4><p>Formulário, pitch deck e vídeo pontuados em sete critérios, num total de 100 pontos.</p></div></div>
+      <div class="module-item"><span class="m-num">04</span><div><h4>Arguição técnica</h4><p>Entrevista online de até 20 minutos, para um número de equipes correspondente a até duas vezes o de vagas.</p></div></div>
+    </div>
+
+    <p class="eyebrow-label reveal">Como a nota é formada</p>
+
+    <div class="feature-list reveal">
+      <div class="feature-row"><span class="f-tag">20 pontos</span><p>Problema e validação da dor de mercado.</p></div>
+      <div class="feature-row"><span class="f-tag">20 pontos</span><p>Solução, inovação e uso de tecnologia.</p></div>
+      <div class="feature-row"><span class="f-tag">15 pontos</span><p>Modelo de negócio e potencial de escala.</p></div>
+      <div class="feature-row"><span class="f-tag">15 pontos</span><p>Equipe: competências, complementaridade e histórico.</p></div>
+      <div class="feature-row"><span class="f-tag">10 pontos</span><p>Aderência ao objeto do edital e ao território de Lavras.</p></div>
+      <div class="feature-row"><span class="f-tag">10 pontos</span><p>Disponibilidade e comprometimento com a jornada.</p></div>
+      <div class="feature-row"><span class="f-tag">10 pontos</span><p>Clareza e consistência do pitch.</p></div>
+    </div>
+
+    <p class="module-intro reveal">Nota mínima para classificação: <strong>60 pontos</strong>. Zero em qualquer critério elimina a equipe. Em caso de empate, o edital dá preferência a projetos de distritos, zona rural e bairros periféricos, e a equipes lideradas por mulheres, pessoas negras, indígenas ou com deficiência.</p>
+
+    <p class="eyebrow-label reveal">Ainda não se sente pronto?</p>
+
+    <div class="benefit-list reveal">
+      <div class="benefit-item">
+        <h3>Inscrição assistida</h3>
+        <p>Se você não tem computador, internet ou familiaridade com formulário eletrônico, a Superintendência faz a inscrição junto com você, presencialmente ou à distância. Há formulário em meio físico e apoio a pessoas com deficiência. Ninguém fica de fora por falta de acesso.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Quartas Abertas</h3>
+        <p>Durante todo o período de inscrições acontecem encontros gratuitos e abertos ao público, sem precisar estar inscrito no edital — da primeira ideia ao MVP sem código. É por onde começar se o seu projeto ainda é só uma vontade.</p>
+      </div>
+    </div>
+
+    <div class="cta-duo reveal">
+      <a class="cta-secondary" href="#" target="_blank" rel="noopener">Ler o edital completo</a>
+      <a class="cta-inline" href="https://docs.google.com/forms/d/e/1FAIpQLScmtj_duvEW7uPsk-DqT71yMmXBg-kpiMLJpuKEL8W9EUmcZA/viewform" target="_blank" rel="noopener">Fazer minha inscrição</a>
+    </div>
+
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="footer-line reveal">O futuro que a gente <em>decide</em> construir começa em Lavras.</p>
+    <div class="cta-stack reveal">
+      <a class="cta-inline" href="https://docs.google.com/forms/d/e/1FAIpQLScmtj_duvEW7uPsk-DqT71yMmXBg-kpiMLJpuKEL8W9EUmcZA/viewform" target="_blank" rel="noopener">Fazer minha inscrição</a>
+      <a class="cta-secondary" href="#" target="_blank" rel="noopener">Ler o edital em PDF</a>
+    </div>
+
+
+    <div class="footer-meta">
+      <span>Superintendência de Políticas de Ciência, Tecnologia e Inovação — Prefeitura Municipal de Lavras · Edital de Chamamento Público nº 001/2026</span>
+      <span>Conteúdo digital, mentorias e bancas técnicas em parceria com o RAJA, a título de doação de serviços.</span>
+      <span>Este site é material de divulgação. Em caso de divergência, prevalece o texto do Edital nº 001/2026 e seus anexos.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
