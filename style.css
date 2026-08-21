@@ -957,6 +957,65 @@ footer .wrap {
 
 .footer-contato a:hover { text-decoration: underline; }
 
+/* ---------- RODA DE CONVERSA (Quartas Abertas) ---------- */
+
+.roda-conversa {
+  display: block;
+  width: 100%;
+  max-width: 224px;
+  height: auto;
+  margin: 26px auto 4px;
+  overflow: visible;
+}
+
+.rc-teia line {
+  stroke: var(--blue);
+  stroke-width: 1;
+  opacity: .3;
+}
+
+.rc-aro {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1;
+  stroke-dasharray: 3 7;
+  opacity: .35;
+  transform-origin: 100px 96px;
+  animation: rc-girar 44s linear infinite;
+}
+
+.rc-cabeca {
+  fill: var(--blue-soft);
+}
+
+.rc-corpo {
+  fill: var(--blue);
+  opacity: .75;
+}
+
+.rc-pessoa {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rc-respirar 4.6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * .38s);
+}
+
+@keyframes rc-girar {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rc-respirar {
+  0%, 100% { opacity: .55; }
+  50%      { opacity: 1; }
+}
+
+.benefit-item:hover .rc-teia line { opacity: .55; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rc-aro { animation: none; }
+  .rc-pessoa { animation: none; opacity: .85; }
+}
+
 /* ---------- ENDERECO NA INSCRICAO ASSISTIDA ---------- */
 
 .local-lista {
