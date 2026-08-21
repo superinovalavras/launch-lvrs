@@ -968,52 +968,41 @@ footer .wrap {
   overflow: visible;
 }
 
-/* o giro e comandado pela rolagem, via script */
-.rc-giro {
-  transform-box: view-box;
-  transform-origin: 100px 100px;
-}
-
-.rc-teia line {
-  stroke: var(--blue);
-  stroke-width: 1;
-  opacity: .3;
-  transition: opacity .4s var(--ease);
-}
+/* NAO declarar transform-origin aqui: o giro ja leva o centro no proprio
+   comando, rotate(angulo 100 100). Declarar nos dois lugares soma os dois
+   deslocamentos e a roda passa a orbitar em vez de girar no lugar. */
 
 .rc-aro {
   fill: none;
   stroke: var(--blue);
   stroke-width: 1;
-  stroke-dasharray: 3 7;
-  opacity: .35;
+  stroke-dasharray: 3 8;
+  opacity: .3;
 }
 
-/* cada pessoa tem seu degrade, e cada degrade corre no seu tempo */
-.rc-s1 { stop-color: var(--blue-soft); }
-.rc-s2 { stop-color: var(--blue); }
+/* cada pessoa tem seu degrade, e os sete correm defasados */
+.rc-s1 { stop-color: #dbe7ff; }
+.rc-s2 { stop-color: #2f5fc4; }
 
 .rc-grad .rc-s1 {
-  animation: rc-tom-a 5.5s ease-in-out infinite;
-  animation-delay: calc(var(--i) * -0.78s);
+  animation: rc-tom-a 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.68s);
 }
 
 .rc-grad .rc-s2 {
-  animation: rc-tom-b 5.5s ease-in-out infinite;
-  animation-delay: calc(var(--i) * -0.78s);
+  animation: rc-tom-b 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.68s);
 }
 
 @keyframes rc-tom-a {
-  0%, 100% { stop-color: #93b6ff; }
-  50%      { stop-color: #3f6fd8; }
+  0%, 100% { stop-color: #dbe7ff; }
+  50%      { stop-color: #2f5fc4; }
 }
 
 @keyframes rc-tom-b {
-  0%, 100% { stop-color: #3f6fd8; }
-  50%      { stop-color: #93b6ff; }
+  0%, 100% { stop-color: #2f5fc4; }
+  50%      { stop-color: #dbe7ff; }
 }
-
-.benefit-item:hover .rc-teia line { opacity: .6; }
 
 @media (prefers-reduced-motion: reduce) {
   .rc-grad .rc-s1, .rc-grad .rc-s2 { animation: none; }
