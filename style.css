@@ -968,10 +968,17 @@ footer .wrap {
   overflow: visible;
 }
 
+/* o giro e comandado pela rolagem, via script */
+.rc-giro {
+  transform-box: view-box;
+  transform-origin: 100px 100px;
+}
+
 .rc-teia line {
   stroke: var(--blue);
   stroke-width: 1;
   opacity: .3;
+  transition: opacity .4s var(--ease);
 }
 
 .rc-aro {
@@ -980,40 +987,36 @@ footer .wrap {
   stroke-width: 1;
   stroke-dasharray: 3 7;
   opacity: .35;
-  transform-origin: 100px 96px;
-  animation: rc-girar 44s linear infinite;
 }
 
-.rc-cabeca {
-  fill: var(--blue-soft);
+/* cada pessoa tem seu degrade, e cada degrade corre no seu tempo */
+.rc-s1 { stop-color: var(--blue-soft); }
+.rc-s2 { stop-color: var(--blue); }
+
+.rc-grad .rc-s1 {
+  animation: rc-tom-a 5.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.78s);
 }
 
-.rc-corpo {
-  fill: var(--blue);
-  opacity: .75;
+.rc-grad .rc-s2 {
+  animation: rc-tom-b 5.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.78s);
 }
 
-.rc-pessoa {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: rc-respirar 4.6s ease-in-out infinite;
-  animation-delay: calc(var(--i) * .38s);
+@keyframes rc-tom-a {
+  0%, 100% { stop-color: #93b6ff; }
+  50%      { stop-color: #3f6fd8; }
 }
 
-@keyframes rc-girar {
-  to { transform: rotate(360deg); }
+@keyframes rc-tom-b {
+  0%, 100% { stop-color: #3f6fd8; }
+  50%      { stop-color: #93b6ff; }
 }
 
-@keyframes rc-respirar {
-  0%, 100% { opacity: .55; }
-  50%      { opacity: 1; }
-}
-
-.benefit-item:hover .rc-teia line { opacity: .55; }
+.benefit-item:hover .rc-teia line { opacity: .6; }
 
 @media (prefers-reduced-motion: reduce) {
-  .rc-aro { animation: none; }
-  .rc-pessoa { animation: none; opacity: .85; }
+  .rc-grad .rc-s1, .rc-grad .rc-s2 { animation: none; }
 }
 
 /* ---------- ENDERECO NA INSCRICAO ASSISTIDA ---------- */

@@ -80,6 +80,32 @@ var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     railRocket.style.top = (progress * trackH) + 'px';
   }
 
+  /* ---------- a roda de conversa gira conforme a rolagem ---------- */
+
+  var rodaGiro = document.querySelector('.rc-giro');
+  var rodaPedida = false;
+
+  function girarRoda() {
+    rodaPedida = false;
+    if (!rodaGiro) return;
+    var svg = rodaGiro.ownerSVGElement;
+    var r = svg.getBoundingClientRect();
+    var alturaJanela = window.innerHeight || document.documentElement.clientHeight;
+    // 0 quando a roda encosta na base da tela, 1 quando sai por cima
+    var progresso = (alturaJanela - r.top) / (alturaJanela + r.height);
+    progresso = Math.max(0, Math.min(1, progresso));
+    rodaGiro.setAttribute('transform',
+      'rotate(' + (progresso * 180).toFixed(2) + ' 100 100)');
+  }
+
+  function pedirGiro() {
+    if (rodaPedida || !rodaGiro) return;
+    rodaPedida = true;
+    requestAnimationFrame(girarRoda);
+  }
+
+  if (rodaGiro && reduceMotion) rodaGiro = null;
+
   /* ---------- o rail so aparece depois da barra de abas ---------- */
 
   var railEl = document.getElementById('scrollRail');
@@ -106,11 +132,12 @@ var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     heroParallax.style.opacity = String(1 - progress * 1.1);
   }
 
-  window.addEventListener('scroll', function () { updateRail(); updateHeroParallax(); atualizaRail(); }, { passive: true });
+  window.addEventListener('scroll', function () { updateRail(); updateHeroParallax(); atualizaRail(); pedirGiro(); }, { passive: true });
   window.addEventListener('resize', function () { updateRail(); updateHeroParallax(); atualizaRail(); });
   updateRail();
   updateHeroParallax();
   atualizaRail();
+  girarRoda();
 
   /* ---------- 3D tilt on benefit cards ---------- */
 
