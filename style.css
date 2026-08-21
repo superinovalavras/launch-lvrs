@@ -343,10 +343,11 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 .tab-btn.cta-outline {
   position: relative;
-  background: var(--bg);
-  color: var(--yellow);
+  background: var(--yellow);
+  color: #000;
   border: 1px solid var(--yellow);
   font-weight: 700;
+  mix-blend-mode: lighten;
   text-decoration: none;
   display: inline-block;
   animation: cta-pulse 2.6s ease-in-out infinite;
@@ -358,9 +359,9 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 }
 
 .tab-btn.cta-outline:hover {
-  background: var(--yellow);
-  border-color: var(--yellow);
-  color: #1a1400;
+  background: #ffdb3d;
+  border-color: #ffdb3d;
+  color: #000;
   transform: translateY(-1px);
   animation-play-state: paused;
 }
@@ -444,17 +445,18 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 /* botao do edital na barra: mesmo tamanho das abas, cor propria */
 .tab-btn.tab-edital {
-  background: var(--bg);
+  background: var(--blue);
   border-color: var(--blue);
-  color: var(--blue-soft);
+  color: #000;
   font-weight: 700;
   text-decoration: none;
+  mix-blend-mode: lighten;
 }
 
 .tab-btn.tab-edital:hover {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #05070a;
+  background: #6b9dff;
+  border-color: #6b9dff;
+  color: #000;
   transform: translateY(-1px);
 }
 
@@ -832,19 +834,20 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
-  color: var(--yellow);
-  background: var(--bg);
+  color: #000;
+  background: var(--yellow);
   border: 1px solid var(--yellow);
   border-radius: 999px;
   padding: 14px 28px;
+  mix-blend-mode: lighten;
   text-decoration: none;
   transition: background .25s var(--ease), color .25s var(--ease), transform .2s var(--ease), box-shadow .25s var(--ease);
 }
 
 .cta-inline:hover {
-  background: var(--yellow);
-  border-color: var(--yellow);
-  color: #1a1400;
+  background: #ffdb3d;
+  border-color: #ffdb3d;
+  color: #000;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(255,205,0,.25);
 }
@@ -856,19 +859,20 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
-  color: var(--blue-soft);
-  background: var(--bg);
+  color: #000;
+  background: var(--blue);
   border: 1px solid var(--blue);
   border-radius: 999px;
   padding: 14px 28px;
+  mix-blend-mode: lighten;
   text-decoration: none;
   transition: background .25s var(--ease), color .25s var(--ease), transform .2s var(--ease), box-shadow .25s var(--ease);
 }
 
 .cta-secondary:hover {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #05070a;
+  background: #6b9dff;
+  border-color: #6b9dff;
+  color: #000;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(76,138,255,.25);
 }
