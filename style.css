@@ -343,12 +343,12 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 .tab-btn.cta-outline {
   position: relative;
+  background: var(--bg);
   color: var(--yellow);
   border: 1px solid var(--yellow);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   display: inline-block;
-  margin-left: 8px;
   animation: cta-pulse 2.6s ease-in-out infinite;
 }
 
@@ -359,7 +359,9 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 .tab-btn.cta-outline:hover {
   background: var(--yellow);
+  border-color: var(--yellow);
   color: #1a1400;
+  transform: translateY(-1px);
   animation-play-state: paused;
 }
 
@@ -440,10 +442,12 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   .tabbar-inner { gap: 10px; }
 }
 
-/* botao do edital na barra: mesmo tamanho das abas, so a cor muda */
+/* botao do edital na barra: mesmo tamanho das abas, cor propria */
 .tab-btn.tab-edital {
-  color: var(--blue-soft);
+  background: var(--bg);
   border-color: var(--blue);
+  color: var(--blue-soft);
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -451,6 +455,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   background: var(--blue);
   border-color: var(--blue);
   color: #05070a;
+  transform: translateY(-1px);
 }
 
 /* ---------- PANELS ---------- */
@@ -828,7 +833,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   font-size: 14px;
   font-weight: 600;
   color: var(--yellow);
-  background: transparent;
+  background: var(--bg);
   border: 1px solid var(--yellow);
   border-radius: 999px;
   padding: 14px 28px;
@@ -838,6 +843,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 .cta-inline:hover {
   background: var(--yellow);
+  border-color: var(--yellow);
   color: #1a1400;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(255,205,0,.25);
@@ -851,7 +857,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   font-size: 14px;
   font-weight: 600;
   color: var(--blue-soft);
-  background: transparent;
+  background: var(--bg);
   border: 1px solid var(--blue);
   border-radius: 999px;
   padding: 14px 28px;
@@ -861,6 +867,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 
 .cta-secondary:hover {
   background: var(--blue);
+  border-color: var(--blue);
   color: #05070a;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(76,138,255,.25);
@@ -939,6 +946,92 @@ footer .wrap {
 }
 
 .footer-contato a:hover { text-decoration: underline; }
+
+/* ---------- CONTATO NO RODAPE ---------- */
+
+.contato {
+  margin: 60px auto 8px;
+  width: 100%;
+  max-width: 660px;
+}
+
+.contato-chamada {
+  margin: 0 0 22px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.contato-chamada em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.contato-cartoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 620px) {
+  .contato-cartoes { grid-template-columns: 1fr; }
+}
+
+.contato-cartao {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(76,138,255,.07), rgba(76,138,255,0) 65%);
+  text-decoration: none;
+  text-align: left;
+  transition: border-color .25s var(--ease), background .25s var(--ease),
+              transform .2s var(--ease), box-shadow .25s var(--ease);
+}
+
+.contato-cartao:hover {
+  border-color: rgba(76,138,255,.55);
+  background: linear-gradient(160deg, rgba(76,138,255,.15), rgba(76,138,255,0) 70%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(76,138,255,.16);
+}
+
+.contato-icone {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
+}
+
+.contato-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.contato-rotulo {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contato-valor {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 400px) {
+  .contato-valor { font-size: 15px; }
+}
 
 .footer-meta {
   margin-top: 56px;
