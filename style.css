@@ -261,25 +261,22 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 .tabbar-inner {
   max-width: 1340px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tabbar-abas,
+.tabbar-acoes {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  position: relative;
 }
 
 /* botao do edital, encostado na direita da barra */
-.tab-edital {
-  position: absolute;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 11px 22px;
-  font-size: 14px;
-}
-
 @media (max-width: 1200px) {
-  .tab-edital { position: static; transform: none; }
 }
 
 /* no celular a barra vira uma linha so, que rola de lado —
@@ -316,6 +313,7 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 11px 22px;
+  white-space: nowrap;
   cursor: pointer;
   transition: background .2s var(--ease), color .2s var(--ease),
               border-color .2s var(--ease), transform .2s var(--ease),
@@ -434,6 +432,25 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
   .realizadores-fila { flex: 1; flex-wrap: wrap; justify-content: center; gap: 32px 56px; padding-right: 0; }
   .realizadores-fila[aria-hidden="true"] { display: none; }
   .realizadores-janela { -webkit-mask-image: none; mask-image: none; }
+}
+
+@media (max-width: 560px) {
+  .tab-btn { font-size: 14px; padding: 9px 15px; }
+  .tabbar-abas, .tabbar-acoes { gap: 8px; }
+  .tabbar-inner { gap: 10px; }
+}
+
+/* botao do edital na barra: mesmo tamanho das abas, so a cor muda */
+.tab-btn.tab-edital {
+  color: var(--blue-soft);
+  border-color: var(--blue);
+  text-decoration: none;
+}
+
+.tab-btn.tab-edital:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #05070a;
 }
 
 /* ---------- PANELS ---------- */
