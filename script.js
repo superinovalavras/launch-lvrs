@@ -80,6 +80,18 @@ var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     railRocket.style.top = (progress * trackH) + 'px';
   }
 
+  /* ---------- o rail so aparece depois da barra de abas ---------- */
+
+  var railEl = document.getElementById('scrollRail');
+  var tabbarEl = document.getElementById('tabbar');
+
+  function atualizaRail() {
+    if (!railEl || !tabbarEl) return;
+    var gatilho = tabbarEl.offsetTop + tabbarEl.offsetHeight;
+    var y = window.scrollY || document.documentElement.scrollTop;
+    railEl.classList.toggle('rail-ativo', y > gatilho);
+  }
+
   /* ---------- hero parallax (liftoff on scroll) ---------- */
 
   var heroParallax = document.getElementById('heroParallax');
@@ -94,10 +106,11 @@ var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     heroParallax.style.opacity = String(1 - progress * 1.1);
   }
 
-  window.addEventListener('scroll', function () { updateRail(); updateHeroParallax(); }, { passive: true });
-  window.addEventListener('resize', function () { updateRail(); updateHeroParallax(); });
+  window.addEventListener('scroll', function () { updateRail(); updateHeroParallax(); atualizaRail(); }, { passive: true });
+  window.addEventListener('resize', function () { updateRail(); updateHeroParallax(); atualizaRail(); });
   updateRail();
   updateHeroParallax();
+  atualizaRail();
 
   /* ---------- 3D tilt on benefit cards ---------- */
 
