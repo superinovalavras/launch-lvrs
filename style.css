@@ -380,18 +380,9 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 .realizadores {
   position: relative;
   z-index: 1;
-  padding: 30px 0 0;
+  padding: 14px 0 0;
 }
 
-.realizadores-titulo {
-  margin: 0 0 18px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
 
 .realizadores-janela {
   overflow: hidden;
@@ -1091,10 +1082,10 @@ footer .wrap {
 
 .rodape-logos-fila img {
   display: block;
-  height: 42px;
+  height: 46px;
   width: auto;
-  opacity: .55;
-  transition: opacity .3s var(--ease), transform .25s var(--ease);
+  opacity: .58;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
 }
 
 .rodape-logos-fila a {
@@ -1106,47 +1097,21 @@ footer .wrap {
 
 .rodape-logos-fila a:hover img {
   opacity: 1;
-  transform: translateY(-3px);
+  transform: scale(1.14);
 }
 
 .rodape-logos-fila a:focus-visible { outline: 2px solid var(--blue); }
 
 @media (max-width: 560px) {
   .rodape-logos-fila { gap: 24px 32px; }
-  .rodape-logos-fila img { height: 34px; }
+  .rodape-logos-fila img { height: 36px; }
 }
 
-.rodape-logos-titulo--apoio {
-  margin: 36px 0 20px;
-}
 
-.rodape-principal {
-  display: inline-block;
-  line-height: 0;
-  border-radius: 8px;
-  outline-offset: 8px;
-}
 
-.rodape-principal img {
-  display: block;
-  height: 78px;
-  width: auto;
-  margin: 0 auto;
-  opacity: .92;
-  filter: drop-shadow(0 0 26px rgba(76, 138, 255, .22));
-  transition: opacity .3s var(--ease), transform .25s var(--ease);
-}
 
-.rodape-principal:hover img {
-  opacity: 1;
-  transform: translateY(-3px);
-}
 
-.rodape-principal:focus-visible { outline: 2px solid var(--blue); }
 
-@media (max-width: 560px) {
-  .rodape-principal img { height: 62px; }
-}
 
 /* ---------- CONTATO NO RODAPE ---------- */
 
