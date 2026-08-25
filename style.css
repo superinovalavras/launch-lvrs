@@ -421,6 +421,19 @@ p, h1, h2, h3, h4 { overflow-wrap: break-word; }
 }
 
 .realizadores img:hover { opacity: 1; }
+.realizadores-link {
+  display: block;
+  line-height: 0;
+  border-radius: 6px;
+  outline-offset: 4px;
+}
+
+.realizadores-link:focus-visible {
+  outline: 2px solid var(--blue);
+}
+
+.realizadores-link img { cursor: pointer; }
+
 
 .realizadores-janela:hover .realizadores-trilho { animation-play-state: paused; }
 
@@ -1061,6 +1074,59 @@ footer .wrap {
   background: var(--blue);
   color: #05070a;
   transform: translateY(-1px);
+}
+
+/* ---------- LOGOS NO RODAPE ---------- */
+
+.rodape-logos {
+  width: 100%;
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.rodape-logos-titulo {
+  margin: 0 0 26px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.rodape-logos-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px 46px;
+}
+
+.rodape-logos-fila img {
+  display: block;
+  height: 42px;
+  width: auto;
+  opacity: .55;
+  transition: opacity .3s var(--ease), transform .25s var(--ease);
+}
+
+.rodape-logos-fila a {
+  display: block;
+  line-height: 0;
+  border-radius: 6px;
+  outline-offset: 6px;
+}
+
+.rodape-logos-fila a:hover img {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.rodape-logos-fila a:focus-visible { outline: 2px solid var(--blue); }
+
+@media (max-width: 560px) {
+  .rodape-logos-fila { gap: 24px 32px; }
+  .rodape-logos-fila img { height: 34px; }
 }
 
 /* ---------- CONTATO NO RODAPE ---------- */
